@@ -19,7 +19,7 @@
         mensal de cada cliente. Faça um exemplo de uso.
 */
 
-public abstract class Contrato {
+public abstract class Contrato implements Cloneable{
     private String nome;
     private String CPF;
     private int numero;
@@ -39,6 +39,10 @@ public abstract class Contrato {
     public int getNumero() {        return numero;    }
 
     public void setNumero(int numero) {        this.numero = numero;    }
+
+    public Object clone()throws CloneNotSupportedException{
+        return super.clone();
+    }
 
     @Override
     public String toString() {

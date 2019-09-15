@@ -1,6 +1,6 @@
 public class AppTelefonia {
 
-    public static void main (String[] args){
+    public static void main (String[] args) throws CloneNotSupportedException {
 
         CiaTelefonica claro = new CiaTelefonica("Claro");
 
@@ -48,5 +48,12 @@ public class AppTelefonia {
         ((ContratoTelMovel)movelPre2).setNumeroMinutosParaFixo(50);
 
         System.out.println(claro);
+
+        System.out.println("\n\nTestando clonagem:\n");
+        Contrato aclonar = new ContratoTelFixoComercial("AserCopiado","1234", 1234, 100);
+        Contrato clone=(Contrato)aclonar.clone();
+        clone.setNome("Clone");
+        System.out.println(aclonar);
+        System.out.println(clone);
     }
 }
