@@ -4,7 +4,7 @@
         número de minutos em ligações para telefones móveis.
  */
 
-public class ContratoTelFixo extends Contrato {
+public abstract class ContratoTelFixo extends Contrato {
 
     private double custoBasico;
     private double custoLigacoes;
