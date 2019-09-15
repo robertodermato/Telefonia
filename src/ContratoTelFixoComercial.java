@@ -14,6 +14,12 @@ public class ContratoTelFixoComercial extends ContratoTelFixo {
         this.franquia=franquia;
     }
 
+    public double minutosRestantesFranquia(){
+        double resto = this.franquia*1.0 - (super.getNumeroMinutosParaFixo()+super.getNumeroMinutosParaMovel());
+        if (resto<=0) return 0;
+        else return resto;
+    }
+
     public double getCustoFixo(){
         return super.getNumeroMinutosParaFixo()*0.15;
     }
